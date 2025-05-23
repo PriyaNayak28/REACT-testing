@@ -1,0 +1,16 @@
+Topic1>> Run First Test
+
+.install React app
+.check Testing Library
+.Run test case
+.check output
+.interview question
+
+Topic2>>  Write Basic Test
+
+.Make js file a simple function
+.Make test file
+.what is test function
+.what is expect function
+.write test case
+.Run test case
