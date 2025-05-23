@@ -14,3 +14,11 @@ Topic2>>  Write Basic Test
 .what is expect function
 .write test case
 .Run test case
+
+Topic3>> understand react test structure
+
+.what needs to import
+.how to render the component
+.how tests working with RTL
+.how test finding UI elements
+
