@@ -5,3 +5,15 @@ Watch Usage
  › Press p to filter by a filename regex pattern.
  › Press t to filter by a test name regex pattern.
  › Press Enter to trigger a test run.
+
+
+>>>>>about ignore case sensitivity
+  const linkPara = screen.getByText(/Hello World/i)
+  expect(linkPara).toBeInTheDocument();
+
+  here in Hello World applied under in /../i bcoz of
+  ignore captial or small letter case sensitivity
+
+  learn-
+  .getByText
+  .getByTitle

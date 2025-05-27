@@ -22,3 +22,11 @@ Topic3>> understand react test structure
 .how tests working with RTL
 .how test finding UI elements
 
+Topic4>>Write first react test
+
+.Make new test function
+.Write test case for check text on screen
+.Write test for case-insensitive text.
+.Test title for image.
+Write multiple expect in the same test function.
+
