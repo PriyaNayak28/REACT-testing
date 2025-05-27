@@ -5,6 +5,9 @@ function App() {
   return (
     <div className="App">
       <p>Hello World</p>
+      <input type="text" placeholder="Type here..."  name="username"/>
+      <br/>
+
     </div>
   );
 }

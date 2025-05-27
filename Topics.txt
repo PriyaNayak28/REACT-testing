@@ -30,3 +30,15 @@ Topic4>>Write first react test
 .Test title for image.
 Write multiple expect in the same test function.
 
+Topic5>>Test input box
+
+.make input box in app component.
+.write test case function.
+the test input box is present or not.
+test input box.
+-> name ,
+-> placeholder,
+-> id 
+-> value 
+-> type
+

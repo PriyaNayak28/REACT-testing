@@ -17,3 +17,6 @@ Watch Usage
   learn-
   .getByText
   .getByTitle
+  .getByRole("textbox")
+  .getByPlaceholderText()
+  .toHaveAttribute( checkName , attributeName)
