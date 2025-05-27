@@ -42,3 +42,13 @@ test input box.
 -> value 
 -> type
 
+Topic6>>Test Case Run Options
+
+.How to run specific test files.
+.What is watch Mode?
+.How to run the failed test case.
+.How to run call test cases.
+.How to quit watch mode.
+.How to filter test files for run.
+.How to filter test case.
+

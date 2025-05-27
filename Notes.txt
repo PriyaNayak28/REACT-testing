@@ -20,3 +20,6 @@ Watch Usage
   .getByRole("textbox")
   .getByPlaceholderText()
   .toHaveAttribute( checkName , attributeName)
+
+
+ cmd to run -  npm run test
