@@ -23,3 +23,13 @@ Watch Usage
 
 
  cmd to run -  npm run test
+
+grouping test cases
+function - Describe(()=> { })
+-> Describe.only
+-> Describe.skip
+
+with expect example
+-> const linkPara = screen.getByText(/Hello World/i);
+ ->   expect(linkPara).toBeInTheDocument();
+->    expect(linkPara).toHaveAttribute("name", "username");

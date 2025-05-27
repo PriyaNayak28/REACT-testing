@@ -16,3 +16,20 @@ test('renders input field', () => {
   expect(placeholderText).toBeInTheDocument();
   expect(inputElement).toHaveAttribute("name", "username");
 });
+
+
+// grouping test case 
+describe("grouping test case" , ()=> {
+  test("first test case", ()=> {
+    render(<App />);
+    const linkPara = screen.getByText(/Hello World/i);
+    expect(linkPara).toBeInTheDocument();
+  })
+
+   test("2 test case", ()=> {
+    render(<App />);
+    const linkPara = screen.getByRole("textbox");
+    expect(linkPara).toHaveAttribute("name", "username");
+  })
+
+})

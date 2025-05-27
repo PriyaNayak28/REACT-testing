@@ -52,3 +52,12 @@ Topic6>>Test Case Run Options
 .How to filter test files for run.
 .How to filter test case.
 
+Topic7>> Test Grouping With Describe
+
+.what is Describe?
+.how to make test cases group?
+.run test case with Describe.
+skip in Describe.
+only in Describe.
+Nested Describe.
+
