@@ -69,3 +69,10 @@ import component in test file
 write code for test case 
 run test case
 
+Topic9>> Test Click Event with Button
+
+.make Button and state in the component
+.update state with Button Click event
+import component in test file
+write code for test click event
+run test case.

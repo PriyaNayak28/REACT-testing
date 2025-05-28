@@ -41,3 +41,11 @@ test("on change testing" , () => {
   expect(input.value).toBe("a");
 
 })
+
+test("on click testing", () => {
+  render(<App/>)
+  let button = screen.getByRole("button");
+  fireEvent.click(button);
+  let h2 = screen.getByText("update data");
+  expect(h2).toBeInTheDocument();
+});
