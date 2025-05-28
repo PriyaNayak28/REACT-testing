@@ -7,6 +7,10 @@ Watch Usage
  › Press Enter to trigger a test run.
 
 
+import { render , screen , fireEvent}
+//fireEvent fire the event the event want to fire ex. onChange
+
+
 >>>>>about ignore case sensitivity
   const linkPara = screen.getByText(/Hello World/i)
   expect(linkPara).toBeInTheDocument();
@@ -33,3 +37,5 @@ with expect example
 -> const linkPara = screen.getByText(/Hello World/i);
  ->   expect(linkPara).toBeInTheDocument();
 ->    expect(linkPara).toHaveAttribute("name", "username");
+->    expect().toBe()
+-> 

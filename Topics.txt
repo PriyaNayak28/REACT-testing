@@ -61,3 +61,11 @@ skip in Describe.
 only in Describe.
 Nested Describe.
 
+Topic8>> Test onChange Event with input box
+
+.make input box in the component
+.define state and use with on change Event
+import component in test file
+write code for test case 
+run test case
+

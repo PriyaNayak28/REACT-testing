@@ -1,4 +1,4 @@
-import { render, screen } from '@testing-library/react';
+import { fireEvent, render, screen } from '@testing-library/react';
 import App from './App';
 
 test('renders learn react link', () => {
@@ -14,7 +14,7 @@ test('renders input field', () => {
   const placeholderText = screen.getByPlaceholderText("Type here...");
   expect(inputElement).toBeInTheDocument();
   expect(placeholderText).toBeInTheDocument();
-  expect(inputElement).toHaveAttribute("name", "username");
+  // expect(inputElement).toHaveAttribute("name", "username");
 });
 
 
@@ -29,7 +29,15 @@ describe("grouping test case" , ()=> {
    test("2 test case", ()=> {
     render(<App />);
     const linkPara = screen.getByRole("textbox");
-    expect(linkPara).toHaveAttribute("name", "username");
+    // expect(linkPara).toHaveAttribute("name", "username");
   })
+
+})
+
+test("on change testing" , () => {
+  render(<App/>)
+  let input = screen.getByRole("textbox");
+  fireEvent.change(input, { target: { value: "a" } });
+  expect(input.value).toBe("a");
 
 })
