@@ -1,6 +1,8 @@
 
 import { fireEvent, render, screen } from '@testing-library/react';
+import renderer , {act }from 'react-test-renderer';
 import App from './App';
+import User from './User';
 
 // beforeAll(()  => {
 //   console.log("Running before all tests");
@@ -92,3 +94,13 @@ test("snapshot for app component", () => {
 //   console.log("Running after each test");
 // }
 // );
+
+test("User component renders user list", () => {
+  let componentData = null;
+  act(() => {
+    const instance = renderer.create(<User />);
+    componentData = instance.getInstance();
+  });
+  console.log(componentData); 
+  // expect(componentData.getUserList()).toBe("user LIST");
+});

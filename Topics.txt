@@ -90,3 +90,9 @@ Topic12>>snapshot testing
 
 .what is snapshot testing?
 .how to update snapshots?
+
+Topic13>> class component method testing
+
+.make class component
+.install react test rerender | it's give intance of a fn and class
+test class component method
