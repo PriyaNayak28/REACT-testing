@@ -76,3 +76,17 @@ Topic9>> Test Click Event with Button
 import component in test file
 write code for test click event
 run test case.
+
+Topic10>> file naming convention 
+
+Topic11>> Before and after hooks
+
+.use of before and after hook
+.beforeAll and beforeEach
+.AfterAll and afterEach
+example
+
+Topic12>>
+
+.what is snapshot testing?
+.how to update snapshots?

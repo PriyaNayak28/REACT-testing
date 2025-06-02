@@ -1,51 +1,88 @@
+
 import { fireEvent, render, screen } from '@testing-library/react';
 import App from './App';
 
-test('renders learn react link', () => {
+// beforeAll(()  => {
+//   console.log("Running before all tests");
+// }
+// )
+
+// beforeEach(()  => {
+//   console.log("Running before each test");
+// }
+// )
+
+test('renders hello world text', () => {
+  console.log("first test");
   render(<App />);
-  const linkPara = screen.getByText(/Hello World/i)
-  expect(linkPara).toBeInTheDocument();
+  const helloText = screen.getByText(/hello world/i);
+  expect(helloText).toBeInTheDocument();
 });
 
-
-test('renders input field', () => {
+// Input field 
+test('renders input field and placeholder', () => {
+  console.log("second test");
   render(<App />);
-  const inputElement = screen.getByRole("textbox");
-  const placeholderText = screen.getByPlaceholderText("Type here...");
+  const inputElement = screen.getByRole('textbox');
   expect(inputElement).toBeInTheDocument();
-  expect(placeholderText).toBeInTheDocument();
-  // expect(inputElement).toHaveAttribute("name", "username");
+  expect(inputElement).toHaveAttribute("placeholder", "Type here...");
 });
 
+// Input change 
+test("input updates on change", () => {
+  console.log("third test");
+  render(<App />);
+  const input = screen.getByRole('textbox');
+  fireEvent.change(input, { target: { value: "aa" } });
+  expect(input.value).toBe("aa");
+});
 
-// grouping test case 
-describe("grouping test case" , ()=> {
-  test("first test case", ()=> {
-    render(<App />);
-    const linkPara = screen.getByText(/Hello World/i);
-    expect(linkPara).toBeInTheDocument();
-  })
-
-   test("2 test case", ()=> {
-    render(<App />);
-    const linkPara = screen.getByRole("textbox");
-    // expect(linkPara).toHaveAttribute("name", "username");
-  })
-
-})
-
-test("on change testing" , () => {
-  render(<App/>)
-  let input = screen.getByRole("textbox");
-  fireEvent.change(input, { target: { value: "a" } });
-  expect(input.value).toBe("a");
-
-})
-
-test("on click testing", () => {
-  render(<App/>)
-  let button = screen.getByRole("button");
+// Button click 
+test("button click updates heading", () => {
+  console.log("fourth test");
+  render(<App />);
+  const button = screen.getByText("Click Me");
   fireEvent.click(button);
-  let h2 = screen.getByText("update data");
-  expect(h2).toBeInTheDocument();
+  const result = screen.getByText("update data");
+  expect(result).toBeInTheDocument();
 });
+
+// Grouped 
+describe("Grouped tests", () => {
+  console.log("Grouped tests");
+  test("textbox is rendered", () => {
+    render(<App />);
+    const input = screen.getByRole("textbox");
+    expect(input).toBeInTheDocument();
+  });
+
+  test("button is rendered", () => {
+    render(<App />);
+    const button = screen.getByRole("button", { name: "Click Me" });
+    expect(button).toBeInTheDocument();
+  });
+});
+
+// async form submission
+test("form submission shows loading and success message", async () => {
+  console.log("fifth test");
+  render(<App />);
+  const submitBtn = screen.getByText("Submit");
+  fireEvent.click(submitBtn);
+
+  const loadingText = screen.getByRole("status");
+  expect(loadingText).toHaveTextContent("Loading...");
+
+  const successMessage = await screen.findByText("Form submitted!", {}, { timeout: 2000 });
+  expect(successMessage).toBeInTheDocument();
+});
+
+// afterAll(() => {  
+//   console.log("Running after all tests");
+// }
+// );
+
+// afterEach(() => {
+//   console.log("Running after each test");
+// }
+// );
