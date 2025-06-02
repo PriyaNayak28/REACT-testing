@@ -77,6 +77,12 @@ test("form submission shows loading and success message", async () => {
   expect(successMessage).toBeInTheDocument();
 });
 
+test("snapshot for app component", () => {
+  console.log("sixth test");
+  const container = render(<App />);
+  expect(container).toMatchSnapshot();
+});
+
 // afterAll(() => {  
 //   console.log("Running after all tests");
 // }

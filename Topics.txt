@@ -86,7 +86,7 @@ Topic11>> Before and after hooks
 .AfterAll and afterEach
 example
 
-Topic12>>
+Topic12>>snapshot testing
 
 .what is snapshot testing?
 .how to update snapshots?
