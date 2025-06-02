@@ -96,3 +96,15 @@ Topic13>> class component method testing
 .make class component
 .install react test rerender | it's give intance of a fn and class
 test class component method
+
+Topic14>> function component method testing 
+ 
+Topic15>> RTL query  important**
+
+.steps in testing UI - 1. render component 2. find elements and action 3. Assertions.
+.how RTL query finds elements? - by elements type | name | id | test id | many more etc.
+.types of RTL queries- 
+1.find single element | getBy | queryBy | findBy
+2.find multiple elements | getAllBy | queryAllBy | findAllBy
+
+
