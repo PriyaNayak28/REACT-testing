@@ -107,4 +107,16 @@ Topic15>> RTL query  important**
 1.find single element | getBy | queryBy | findBy
 2.find multiple elements | getAllBy | queryAllBy | findAllBy
 
+Topic16>> getByRole  query
+.what is the role in getByRole ?
+.what is semantic elements?
+-> button , heading tags and table are semantic element
+-> div and span are not semantic elements
+.Test textbox with getByRole
+-> text box present or not 
+-> text box value
+->text box disabled or not 
+.Test button with getByRole
+
+
 

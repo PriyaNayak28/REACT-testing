@@ -19,8 +19,9 @@ function App() {
   return (
     <div className="App">
       <p>Hello World</p>
-      <input
+      <input 
         type="text"
+        aria-label="main-input"
         placeholder="Type here..."
         value={data}
         onChange={(e) => setData(e.target.value)}
@@ -33,7 +34,12 @@ function App() {
       <button onClick={handleSubmit}>Submit</button>
       {loading && <p role="status">Loading...</p>}
       {submitted && <p>Form submitted!</p>}
+       <div>
+      <h1>get By Role</h1>
+      <input  type='text' defaultValue={"Hello World"}   aria-label="second-input"/>
     </div>
+    </div>
+   
   );
 }
 

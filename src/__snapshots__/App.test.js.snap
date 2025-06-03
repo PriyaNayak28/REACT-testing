@@ -12,6 +12,7 @@ Object {
           Hello World
         </p>
         <input
+          aria-label="main-input"
           placeholder="Type here..."
           type="text"
           value=""
@@ -29,6 +30,16 @@ Object {
         <button>
           Submit
         </button>
+        <div>
+          <h1>
+            get By Role
+          </h1>
+          <input
+            aria-label="second-input"
+            type="text"
+            value="Hello World"
+          />
+        </div>
       </div>
     </div>
   </body>,
@@ -40,6 +51,7 @@ Object {
         Hello World
       </p>
       <input
+        aria-label="main-input"
         placeholder="Type here..."
         type="text"
         value=""
@@ -57,6 +69,16 @@ Object {
       <button>
         Submit
       </button>
+      <div>
+        <h1>
+          get By Role
+        </h1>
+        <input
+          aria-label="second-input"
+          type="text"
+          value="Hello World"
+        />
+      </div>
     </div>
   </div>,
   "debug": [Function],

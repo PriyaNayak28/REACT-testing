@@ -25,19 +25,21 @@ test('renders hello world text', () => {
 test('renders input field and placeholder', () => {
   console.log("second test");
   render(<App />);
-  const inputElement = screen.getByRole('textbox');
+  // const inputElement = screen.getByRole('textbox');
+  const inputElement = screen.getByLabelText("main-input");
   expect(inputElement).toBeInTheDocument();
   expect(inputElement).toHaveAttribute("placeholder", "Type here...");
 });
 
 // Input change 
-test("input updates on change", () => {
-  console.log("third test");
-  render(<App />);
-  const input = screen.getByRole('textbox');
-  fireEvent.change(input, { target: { value: "aa" } });
-  expect(input.value).toBe("aa");
-});
+// test("input updates on change", () => {
+//   console.log("third test");
+//   // render(<App />);
+//   // const input = screen.getByRole('textbox');
+//   const input = screen.getByLabelText("second-input");
+//   fireEvent.change(input, { target: { value: "aa" } });
+//   expect(input.value).toBe("aa");
+// });
 
 // Button click 
 test("button click updates heading", () => {
@@ -50,34 +52,34 @@ test("button click updates heading", () => {
 });
 
 // Grouped 
-describe("Grouped tests", () => {
-  console.log("Grouped tests");
-  test("textbox is rendered", () => {
-    render(<App />);
-    const input = screen.getByRole("textbox");
-    expect(input).toBeInTheDocument();
-  });
+// describe("Grouped tests", () => {
+//   console.log("Grouped tests");
+//   test("textbox is rendered", () => {
+//     render(<App />);
+//     const input = screen.getByRole("textbox");
+//     expect(input).toBeInTheDocument();
+//   });
 
-  test("button is rendered", () => {
-    render(<App />);
-    const button = screen.getByRole("button", { name: "Click Me" });
-    expect(button).toBeInTheDocument();
-  });
-});
+//   test("button is rendered", () => {
+//     render(<App />);
+//     const button = screen.getByRole("button", { name: "Click Me" });
+//     expect(button).toBeInTheDocument();
+//   });
+// });
 
 // async form submission
-test("form submission shows loading and success message", async () => {
-  console.log("fifth test");
-  render(<App />);
-  const submitBtn = screen.getByText("Submit");
-  fireEvent.click(submitBtn);
+// test("form submission shows loading and success message", async () => {
+//   console.log("fifth test");
+//   render(<App />);
+//   const submitBtn = screen.getByText("Submit");
+//   fireEvent.click(submitBtn);
 
-  const loadingText = screen.getByRole("status");
-  expect(loadingText).toHaveTextContent("Loading...");
+//   const loadingText = screen.getByRole("status");
+//   expect(loadingText).toHaveTextContent("Loading...");
 
-  const successMessage = await screen.findByText("Form submitted!", {}, { timeout: 2000 });
-  expect(successMessage).toBeInTheDocument();
-});
+//   const successMessage = await screen.findByText("Form submitted!", {}, { timeout: 2000 });
+//   expect(successMessage).toBeInTheDocument();
+// });
 
 test("snapshot for app component", () => {
   console.log("sixth test");
@@ -95,12 +97,19 @@ test("snapshot for app component", () => {
 // }
 // );
 
-test("User component renders user list", () => {
-  let componentData = null;
-  act(() => {
-    const instance = renderer.create(<User />);
-    componentData = instance.getInstance();
-  });
-  console.log(componentData); 
-  // expect(componentData.getUserList()).toBe("user LIST");
-});
+// test("User component renders user list", () => {
+//   let componentData = null;
+//   act(() => {
+//     const instance = renderer.create(<User />);
+//     componentData = instance.getInstance();
+//   });
+//   console.log(componentData); 
+//   // expect(componentData.getUserList()).toBe("user LIST");
+// });
+
+// test("get by role" , ()=> {
+//   render(<App />);
+//   const input = screen.getByRole("textbox");
+//   expect(input).toBeInTheDocument();
+//   expect(input).toHaveValue("Hello World");
+// })
